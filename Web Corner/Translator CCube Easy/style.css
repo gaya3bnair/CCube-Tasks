@@ -1,17 +1,23 @@
 /* TODO: Import Google Font - Poppins */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   /*TODO: add google Poppins font here */
 }
 body{
   /* TODO: set all contents to appear in the center */
-  padding: 0 10px;
+  display:flex;
+  min-height:100vh;
+  align-items:center;
+  text-align: center;
+  justify-content: center;
   min-height: 100vh;
   /* TODO: add background image here from public folder and add a appropriate backgroud-size */
+  background-image: url("public/bg.jpg");
 }
 .container{
   max-width: 690px;
@@ -19,6 +25,7 @@ body{
   padding: 30px;
   background: rgb(255 251 235);
   /* Todo: add css for rounded edges   */
+  border-radius: 10px;
   opacity: 0.85;
   box-shadow: 0 10px 20px rgba(0,0,0,0.01);
 }
@@ -48,10 +55,21 @@ body{
 .text-input textarea::placeholder{
   color: #b7b6b6;
 }
-.controls, li, .icons, .icons i{
+.controls, li{ 
 
   /*TODO: fix display issues and alignments  */
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 12px 15px;
+
+}
+
+.icons, .icons i{
+  display: flex;
+  justify-content: end;
+  align-self: flex-end;
 }
 .controls{
   list-style: none;
@@ -114,6 +132,46 @@ body{
 }
 
 /* TODO: add css for translate button */
+
+.container button {
+  
+  position:relative;
+  margin-top: 20px;
+  background-color: #d64113;
+  border:#333;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #0e0a0a;
+  padding: 1.5px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration:none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.container button:hover {
+  background-color: #e26918;
+  color: #fff;
+}
+.container button:active{
+
+  position: relative;
+  top: 5px;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-transition: All 250ms ease;
+  -moz-transition: All 250ms ease;
+  -o-transition: All 250ms ease;
+  -ms-transition: All 250ms ease;
+  transition: All 250ms ease;
+}
+
+
 
 @media (max-width: 660px){
   .container{
