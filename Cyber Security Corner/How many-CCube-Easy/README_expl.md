@@ -1,3 +1,4 @@
+**Explanation**
 Was tasked with finding how many people from a particular region gathered to Janakpur for Sita Mata's swayamvar. This was to be done in an .sh file.
 The data could be read from the users.txt file in the same directory. We could use a simple while loop to read the file line by line.
 " while read -r line; do " was used for reading line by line
